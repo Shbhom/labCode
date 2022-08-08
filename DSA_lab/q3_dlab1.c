@@ -27,3 +27,6 @@ scanf("%d",&k);
 
 printf("smallest Kth value of the array is: %d\n",a[k-1]);
 printf("largest Kth value of the array is :%d\n",a[5-k]);
+
+return 0;
+}

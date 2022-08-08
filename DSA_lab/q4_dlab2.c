@@ -1,45 +1,60 @@
+// displaying triangular matrices
+
 #include <stdio.h>
 
-int main(int argc, char *argv[]) {
-  int a[5][5] = {{1, 2, 3, 4, 5},
-                 {6, 7, 8, 9, 10},
-                 {11, 12, 13, 14, 15},
-                 {16, 17, 18, 19, 20},
-                 {21, 22, 23, 24, 25}};
-  // 1st print pattern
-  printf("first print\n");
-  for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 5; j++) {
-      if (i > j) {
-        printf("%d\n", a[i][j]);
-      }
+int main(){
+    int n;
+    printf("Enter the value of n ");
+    scanf("%d",&n);
+    int arr[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&arr[i][j]);
+        }
     }
-  }
-  printf("second print\n");
-  // 2nd print pattern
-  for (int i = 1; i < 5; i++) {
-    for (int j = 0; j < i; j++) {
-      printf("%d\n", a[i][j]);
+    //first print pattern
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i>j){
+                printf("%d",arr[i][j]);
+            }
+        }
+        printf("\n");
     }
-  }
+    //second print pattern
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i>0 && j>0 && i+j>=5){
+                printf("%d",arr[i][j]);
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    //third print pattern
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i<j){
+                printf("%d",arr[i][j]);
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    //fourth print pattern
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i<4 && j<4 && i+j<4){
+                printf("%d",arr[i][j]);
+            }
+        }
+        printf("\n");
+    }
 
-  // 3rd print pattern
-  printf("third print\n");
-  for (int i = 0; i < 5; i++) {
-    for (int j = 0; j < 5; j++) {
-      if (j > i) {
-        printf("%d\n", a[i][j]);
-      }
-    }
-  }
 
-  // 4th print pattern
-  for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 5; j++) {
-      if (j == 1 ||) {
-      }
+        return 0;
     }
-  }
-
-  return 0;
-}
