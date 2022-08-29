@@ -13,7 +13,6 @@ int main() {
       min = a[i];
     if (max < a[i])
       max = a[i];
-  }
   printf("minimum of array is : %d", min);
   printf("\nmaximum of array is : %d\n", max);
 
