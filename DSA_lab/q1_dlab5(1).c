@@ -5,4 +5,8 @@ struct node {
   struct node *next;
 };
 
-int main() { return 0; }
+int main() {
+  struct node *head = NULL;
+
+  return 0;
+}
