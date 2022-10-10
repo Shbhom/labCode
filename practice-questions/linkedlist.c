@@ -42,17 +42,17 @@ struct node *insert_af(struct node *head, int item, struct node *prev) {
   return head;
 }
 
-int maxll(struct node *head) {
-  struct node *p = head;
-  int max = INT32_MIN;
-  while (p) {
-    if (p->data > max) {
-      max = p->data;
-      p = p->next;
-    }
-  }
-  return max;
-}
+// int maxll(struct node *head) {
+//   struct node *p = head;
+//   int max = INT32_MIN;
+//   while (p) {
+//     if (p->data > max) {
+//       max = p->data;
+//       p = p->next;
+//     }
+//   }
+//   return max;
+// }
 
 int main() {
   struct node *head = NULL;
@@ -72,17 +72,17 @@ int main() {
   third->data = 3;
   third->next = NULL;
 
-  display(head);
-  printf("\n");
-  head = insert_beg(head, 5);
-  display(head);
+  //  display(head);
+  //  printf("\n");
+  //  head = insert_beg(head, 5);
+  //  display(head);
   printf("\n");
   head = insert_end(head, 5);
   display(head);
-  printf("\n");
-  head = insert_af(head, 5, second);
-  display(head);
-  printf("\n");
+  //  printf("\n");
+  //  head = insert_af(head, 5, second);
+  //  display(head);
+  //  printf("\n");
   // int g = max(head);
   // printf("%d\n", g);
 
