@@ -1,5 +1,3 @@
-// wap to implement stack adt using linked list
-
 /*
  * C Program to Implement a Stack using Linked List
  */
@@ -14,7 +12,6 @@ struct node {
 int peep();
 void push(int data);
 void pop();
-void empty();
 void display();
 void create();
 
@@ -64,10 +61,8 @@ int main() {
   }
 }
 
-/* Create empty stack */
 void create() { top = NULL; }
 
-/* Push data into stack */
 void push(int data) {
   if (top == NULL) {
     top = (struct node *)malloc(1 * sizeof(struct node));
@@ -82,7 +77,6 @@ void push(int data) {
   count++;
 }
 
-/* Display stack elements */
 void display() {
   top1 = top;
 
@@ -97,7 +91,6 @@ void display() {
   }
 }
 
-/* Pop Operation on stack */
 void pop() {
   top1 = top;
 
